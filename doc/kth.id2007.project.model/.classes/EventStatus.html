@@ -1,0 +1,110 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: EventStatus</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">kth.id2007.project.model</a> ]
+</div>
+
+<h1>Coverage Summary for Class: EventStatus (kth.id2007.project.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">EventStatus</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (1/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (1/ 2)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package kth.id2007.project.model;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;/**
+<i>4</i>&nbsp; * Class containing string-constants for representing status of an event.
+<i>5</i>&nbsp; *
+<i>6</i>&nbsp; * @author Kim Hammar on 2016-10-12.
+<i>7</i>&nbsp; */
+<b class="nc"><i>8</i>&nbsp;public class EventStatus {</b>
+<i>9</i>&nbsp;    /**
+<i>10</i>&nbsp;     * Event statuses
+<i>11</i>&nbsp;     */
+<i>12</i>&nbsp;    public static final String CREATED = &quot;CREATED&quot;;
+<i>13</i>&nbsp;    public static final String OPEN = &quot;OPEN&quot;;
+<i>14</i>&nbsp;    public static final String IN_PROGRESS = &quot;IN PROGRESS&quot;;
+<i>15</i>&nbsp;    public static final String CLOSED_AND_ARCHIVED = &quot;CLOSED AND ARCHIVED&quot;;
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;    /**
+<i>18</i>&nbsp;     * Method that returns an array of all event-statuses
+<i>19</i>&nbsp;     *
+<i>20</i>&nbsp;     * @return array of statuses
+<i>21</i>&nbsp;     */
+<i>22</i>&nbsp;    public static String[] getAllStatuses(){
+<b class="fc"><i>23</i>&nbsp;        return new String[]{</b>
+<i>24</i>&nbsp;                CREATED, OPEN, IN_PROGRESS, CLOSED_AND_ARCHIVED
+<i>25</i>&nbsp;        };
+<i>26</i>&nbsp;    }
+<i>27</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2016-10-13 17:55</div>
+</div>
+</body>
+</html>

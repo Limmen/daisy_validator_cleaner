@@ -1,0 +1,783 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: GUI</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">kth.id2007.project.view</a> ]
+</div>
+
+<h1>Coverage Summary for Class: GUI (kth.id2007.project.view)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">GUI</td>
+<td class="coverageStat">
+  <span class="percent">
+    62,5%
+  </span>
+  <span class="absValue">
+    (15/ 24)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    70,6%
+  </span>
+  <span class="absValue">
+    (36/ 51)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">GUI$ApproveListener</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (15/ 15)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">GUI$BudgetIssueListener</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    73,9%
+  </span>
+  <span class="absValue">
+    (17/ 23)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">GUI$ClientRecordListener</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92,3%
+  </span>
+  <span class="absValue">
+    (12/ 13)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">GUI$EventApplicationListener</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    78,8%
+  </span>
+  <span class="absValue">
+    (26/ 33)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">GUI$EventEditListener</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    89,5%
+  </span>
+  <span class="absValue">
+    (34/ 38)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">GUI$HrRequestListener</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    76,2%
+  </span>
+  <span class="absValue">
+    (16/ 21)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">GUI$LoginListener</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    87%
+  </span>
+  <span class="absValue">
+    (20/ 23)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">GUI$SubTeamTasksListener</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    72,2%
+  </span>
+  <span class="absValue">
+    (13/ 18)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    79,1%
+  </span>
+  <span class="absValue">
+    (34/ 43)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    80,4%
+  </span>
+  <span class="absValue">
+    (189/ 235)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package kth.id2007.project.view;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import kth.id2007.project.model.*;
+<i>4</i>&nbsp;import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;import javax.swing.*;
+<i>7</i>&nbsp;import javax.swing.table.DefaultTableModel;
+<i>8</i>&nbsp;import java.awt.event.ActionEvent;
+<i>9</i>&nbsp;import java.awt.event.ActionListener;
+<i>10</i>&nbsp;import java.util.ArrayList;
+<i>11</i>&nbsp;
+<i>12</i>&nbsp;/**
+<i>13</i>&nbsp; * GUI Controller, all calls from the view to the model goes through here.
+<i>14</i>&nbsp; */
+<b class="fc"><i>15</i>&nbsp;public class GUI {</b>
+<i>16</i>&nbsp;
+<b class="fc"><i>17</i>&nbsp;    private GUI gui = this;</b>
+<b class="fc"><i>18</i>&nbsp;    private ArrayList&lt;User&gt; users = new ArrayList();</b>
+<b class="fc"><i>19</i>&nbsp;    private ArrayList&lt;ClientRecord&gt; clients = new ArrayList();</b>
+<b class="fc"><i>20</i>&nbsp;    private ArrayList&lt;EventApplication&gt; applications = new ArrayList();</b>
+<b class="fc"><i>21</i>&nbsp;    private ArrayList&lt;HrRequest&gt; hrRequests = new ArrayList();</b>
+<b class="fc"><i>22</i>&nbsp;    private ArrayList&lt;MainFrame&gt; mainFrames = new ArrayList();</b>
+<b class="fc"><i>23</i>&nbsp;    private ArrayList&lt;BudgetIssueRequest&gt; budgetIssues = new ArrayList&lt;&gt;();</b>
+<b class="fc"><i>24</i>&nbsp;    private ArrayList&lt;SubTeamTask&gt; tasks = new ArrayList();</b>
+<i>25</i>&nbsp;
+<i>26</i>&nbsp;    /**
+<i>27</i>&nbsp;     * Class constructor
+<i>28</i>&nbsp;     */
+<b class="fc"><i>29</i>&nbsp;    public GUI() {</b>
+<b class="fc"><i>30</i>&nbsp;        new StartFrame(this);</b>
+<b class="fc"><i>31</i>&nbsp;    }</b>
+<i>32</i>&nbsp;
+<i>33</i>&nbsp;
+<i>34</i>&nbsp;    private void clearFields(JTextField... fields) {
+<b class="fc"><i>35</i>&nbsp;        for (JTextField t : fields) {</b>
+<b class="fc"><i>36</i>&nbsp;            t.setText(&quot;&quot;);</b>
+<i>37</i>&nbsp;        }
+<b class="fc"><i>38</i>&nbsp;    }</b>
+<i>39</i>&nbsp;
+<i>40</i>&nbsp;    private boolean fieldsContainText(JTextField... fields) {
+<b class="fc"><i>41</i>&nbsp;        for (JTextField t : fields) {</b>
+<b class="fc"><i>42</i>&nbsp;            if (t.getText().length() == 0)</b>
+<b class="nc"><i>43</i>&nbsp;                return false;</b>
+<i>44</i>&nbsp;        }
+<b class="fc"><i>45</i>&nbsp;        return true;</b>
+<i>46</i>&nbsp;    }
+<i>47</i>&nbsp;
+<i>48</i>&nbsp;    /**
+<i>49</i>&nbsp;     * Main method, entry point of the program. Initializes the GUI.
+<i>50</i>&nbsp;     *
+<i>51</i>&nbsp;     * @param args
+<i>52</i>&nbsp;     */
+<i>53</i>&nbsp;    public static void main(String[] args) {
+<b class="nc"><i>54</i>&nbsp;        new GUI();</b>
+<b class="nc"><i>55</i>&nbsp;    }</b>
+<i>56</i>&nbsp;
+<i>57</i>&nbsp;    private void updateGUI() {
+<b class="fc"><i>58</i>&nbsp;        mainFrames.forEach((frame) -&gt; frame.update());</b>
+<b class="fc"><i>59</i>&nbsp;    }</b>
+<i>60</i>&nbsp;
+<i>61</i>&nbsp;    // Action listener for login-button on the startframe.
+<i>62</i>&nbsp;    class LoginListener implements ActionListener {
+<i>63</i>&nbsp;
+<i>64</i>&nbsp;        private final JTextField usernameField;
+<i>65</i>&nbsp;        private final JPasswordField passwordField;
+<i>66</i>&nbsp;        private final JComboBox rolesList;
+<i>67</i>&nbsp;        private final JComboBox teamsList;
+<i>68</i>&nbsp;
+<i>69</i>&nbsp;        LoginListener(JTextField usernameField, JPasswordField passwordField, JComboBox rolesList,
+<b class="fc"><i>70</i>&nbsp;                      JComboBox teamsList) {</b>
+<b class="fc"><i>71</i>&nbsp;            this.usernameField = usernameField;</b>
+<b class="fc"><i>72</i>&nbsp;            this.passwordField = passwordField;</b>
+<b class="fc"><i>73</i>&nbsp;            this.rolesList = rolesList;</b>
+<b class="fc"><i>74</i>&nbsp;            this.teamsList = teamsList;</b>
+<b class="fc"><i>75</i>&nbsp;        }</b>
+<i>76</i>&nbsp;
+<i>77</i>&nbsp;        /**
+<i>78</i>&nbsp;         * Invoked when an action occurs.
+<i>79</i>&nbsp;         *
+<i>80</i>&nbsp;         * @param e
+<i>81</i>&nbsp;         */
+<i>82</i>&nbsp;        public void actionPerformed(ActionEvent e) {
+<b class="fc"><i>83</i>&nbsp;            if (usernameField.getText().length() &gt; 0 &amp;&amp; passwordField.getPassword().length &gt; 0) {</b>
+<i>84</i>&nbsp;
+<b class="fc"><i>85</i>&nbsp;                boolean userExists = true;</b>
+<b class="fc"><i>86</i>&nbsp;                for (User u : users)</b>
+<b class="nc"><i>87</i>&nbsp;                    if (u.getUsername().equals(usernameField.getText()))</b>
+<b class="nc"><i>88</i>&nbsp;                        userExists = false;</b>
+<b class="fc"><i>89</i>&nbsp;                if (userExists) {</b>
+<b class="fc"><i>90</i>&nbsp;                    User user = new User(usernameField.getText(), new String(passwordField.getPassword()),</b>
+<b class="fc"><i>91</i>&nbsp;                            (String) rolesList.getSelectedItem(), (String) teamsList.getSelectedItem());</b>
+<b class="fc"><i>92</i>&nbsp;                    users.add(user);</b>
+<b class="fc"><i>93</i>&nbsp;                    mainFrames.add(new MainFrame(gui, user));</b>
+<i>94</i>&nbsp;                    //startFrame.setVisible(false);
+<b class="fc"><i>95</i>&nbsp;                    usernameField.setText(&quot;&quot;);</b>
+<b class="fc"><i>96</i>&nbsp;                    passwordField.setText(&quot;&quot;);</b>
+<b class="fc"><i>97</i>&nbsp;                    updateGUI();</b>
+<b class="fc"><i>98</i>&nbsp;                } else {</b>
+<b class="nc"><i>99</i>&nbsp;                    errorMessage(&quot;User \&quot;&quot; + usernameField.getText() + &quot;\&quot; alredy exists!&quot;);</b>
+<i>100</i>&nbsp;                }
+<b class="fc"><i>101</i>&nbsp;            } else invalidInput(&quot;&quot;);</b>
+<i>102</i>&nbsp;
+<b class="fc"><i>103</i>&nbsp;        }</b>
+<i>104</i>&nbsp;    }
+<i>105</i>&nbsp;
+<i>106</i>&nbsp;    //ActionListener for the create client record button on the client-record page on the main frame
+<i>107</i>&nbsp;    class ClientRecordListener implements ActionListener {
+<i>108</i>&nbsp;        private JTextField clientNameField;
+<i>109</i>&nbsp;        private JTextField clientEmailField;
+<i>110</i>&nbsp;        private JTextField clientPhoneNumberField;
+<i>111</i>&nbsp;
+<b class="fc"><i>112</i>&nbsp;        ClientRecordListener(JTextField clientNameField, JTextField clientEmailField, JTextField clientPhoneNumberField) {</b>
+<b class="fc"><i>113</i>&nbsp;            this.clientNameField = clientNameField;</b>
+<b class="fc"><i>114</i>&nbsp;            this.clientEmailField = clientEmailField;</b>
+<b class="fc"><i>115</i>&nbsp;            this.clientPhoneNumberField = clientPhoneNumberField;</b>
+<b class="fc"><i>116</i>&nbsp;        }</b>
+<i>117</i>&nbsp;
+<i>118</i>&nbsp;        public void actionPerformed(ActionEvent arg0) {
+<i>119</i>&nbsp;
+<b class="fc"><i>120</i>&nbsp;            if (clientNameField.getText().length() == 0 || clientEmailField.getText().length() == 0 || clientPhoneNumberField.getText().length() == 0) {</b>
+<b class="nc"><i>121</i>&nbsp;                invalidInput(&quot;&quot;);</b>
+<i>122</i>&nbsp;            } else {
+<b class="fc"><i>123</i>&nbsp;                ClientRecord clientRecord = new ClientRecord(clientNameField.getText(), clientEmailField.getText(),</b>
+<b class="fc"><i>124</i>&nbsp;                        clientPhoneNumberField.getText(), null);</b>
+<b class="fc"><i>125</i>&nbsp;                clients.add(clientRecord);</b>
+<b class="fc"><i>126</i>&nbsp;                clearFields(clientEmailField, clientNameField, clientPhoneNumberField);</b>
+<b class="fc"><i>127</i>&nbsp;                updateGUI();</b>
+<i>128</i>&nbsp;
+<i>129</i>&nbsp;                try {
+<i>130</i>&nbsp;
+<i>131</i>&nbsp;                } catch (NumberFormatException e2) {
+<i>132</i>&nbsp;                    if (e2.getMessage() == &quot;null&quot;)
+<i>133</i>&nbsp;                        invalidComboBoxValue();
+<i>134</i>&nbsp;                    else
+<i>135</i>&nbsp;                        invalidNumberInput();
+<i>136</i>&nbsp;                }
+<i>137</i>&nbsp;
+<i>138</i>&nbsp;            }
+<i>139</i>&nbsp;
+<b class="fc"><i>140</i>&nbsp;        }</b>
+<i>141</i>&nbsp;    }
+<i>142</i>&nbsp;
+<i>143</i>&nbsp;    //ActionListener for the create event application button on the event application page on the main frame
+<i>144</i>&nbsp;    class EventApplicationListener implements ActionListener {
+<i>145</i>&nbsp;        private JTextField budgetField;
+<i>146</i>&nbsp;        private JTextField discountField;
+<i>147</i>&nbsp;        private JTextField eventTypeField;
+<i>148</i>&nbsp;        private JTextField preferencesField;
+<i>149</i>&nbsp;        private JTextField descriptionField;
+<i>150</i>&nbsp;        private JTextField expectedAttendeesField;
+<i>151</i>&nbsp;        private JTextField budgetCommentsField;
+<i>152</i>&nbsp;        private JComboBox statusField;
+<i>153</i>&nbsp;        private JDatePickerImpl fromDatePicker, toDatePicker;
+<i>154</i>&nbsp;
+<i>155</i>&nbsp;        EventApplicationListener(JTextField budgetField, JTextField discountField, JTextField eventTypeField,
+<i>156</i>&nbsp;                                 JTextField preferencesField, JTextField descriptionField,
+<i>157</i>&nbsp;                                 JTextField expectedAttendeesField, JDatePickerImpl fromDatePicker, JDatePickerImpl toDatePicker,
+<b class="fc"><i>158</i>&nbsp;                                 JTextField budgetCommentsField, JComboBox statusField) {</b>
+<b class="fc"><i>159</i>&nbsp;            this.budgetField = budgetField;</b>
+<b class="fc"><i>160</i>&nbsp;            this.discountField = discountField;</b>
+<b class="fc"><i>161</i>&nbsp;            this.eventTypeField = eventTypeField;</b>
+<b class="fc"><i>162</i>&nbsp;            this.preferencesField = preferencesField;</b>
+<b class="fc"><i>163</i>&nbsp;            this.descriptionField = descriptionField;</b>
+<b class="fc"><i>164</i>&nbsp;            this.expectedAttendeesField = expectedAttendeesField;</b>
+<b class="fc"><i>165</i>&nbsp;            this.budgetCommentsField = budgetCommentsField;</b>
+<b class="fc"><i>166</i>&nbsp;            this.statusField = statusField;</b>
+<b class="fc"><i>167</i>&nbsp;            this.fromDatePicker = fromDatePicker;</b>
+<b class="fc"><i>168</i>&nbsp;            this.toDatePicker = toDatePicker;</b>
+<b class="fc"><i>169</i>&nbsp;        }</b>
+<i>170</i>&nbsp;
+<b class="fc"><i>171</i>&nbsp;        private String errorStr = &quot;&quot;;</b>
+<i>172</i>&nbsp;
+<i>173</i>&nbsp;        private String getField(JTextField f, String desc) throws IllegalArgumentException {
+<b class="fc"><i>174</i>&nbsp;            if (f.getText().length() &gt; 0)</b>
+<b class="fc"><i>175</i>&nbsp;                return f.getText();</b>
+<i>176</i>&nbsp;            else {
+<b class="nc"><i>177</i>&nbsp;                errorStr += desc + &quot;\n&quot;;</b>
+<b class="nc"><i>178</i>&nbsp;                throw new IllegalArgumentException();</b>
+<i>179</i>&nbsp;            }
+<i>180</i>&nbsp;        }
+<i>181</i>&nbsp;
+<i>182</i>&nbsp;        public void actionPerformed(ActionEvent e) {
+<i>183</i>&nbsp;
+<i>184</i>&nbsp;
+<b class="fc"><i>185</i>&nbsp;            if (!fieldsContainText(budgetField, discountField, eventTypeField, preferencesField, descriptionField, expectedAttendeesField</b>
+<b class="fc"><i>186</i>&nbsp;                    , budgetCommentsField, fromDatePicker.getJFormattedTextField(), toDatePicker.getJFormattedTextField())) {</b>
+<b class="nc"><i>187</i>&nbsp;                invalidInput(&quot;&quot;);</b>
+<i>188</i>&nbsp;            } else {
+<i>189</i>&nbsp;
+<i>190</i>&nbsp;                try {
+<b class="fc"><i>191</i>&nbsp;                    applications.add(new EventApplication(Long.parseLong(getField(budgetField, &quot;budget&quot;)), Integer.parseInt(getField(discountField, &quot;disscount&quot;)), getField(eventTypeField, &quot;event type&quot;),</b>
+<b class="fc"><i>192</i>&nbsp;                            getField(preferencesField, &quot;preferences&quot;), getField(descriptionField, &quot;description&quot;),</b>
+<b class="fc"><i>193</i>&nbsp;                            fromDatePicker.getJFormattedTextField().getText(), toDatePicker.getJFormattedTextField().getText(),</b>
+<b class="fc"><i>194</i>&nbsp;                            Integer.parseInt(getField(expectedAttendeesField, &quot;expected atendees&quot;)), budgetCommentsField.getText(), (String) statusField.getSelectedItem(), &quot;&quot;));</b>
+<b class="fc"><i>195</i>&nbsp;                    clearFields(budgetField, discountField, eventTypeField, preferencesField, descriptionField, expectedAttendeesField</b>
+<b class="fc"><i>196</i>&nbsp;                            , budgetCommentsField, fromDatePicker.getJFormattedTextField(), toDatePicker.getJFormattedTextField());</b>
+<b class="fc"><i>197</i>&nbsp;                    updateGUI();</b>
+<b class="nc"><i>198</i>&nbsp;                } catch (NumberFormatException e2) {</b>
+<b class="nc"><i>199</i>&nbsp;                    if (e2.getMessage() == &quot;null&quot;)</b>
+<b class="nc"><i>200</i>&nbsp;                        invalidComboBoxValue();</b>
+<i>201</i>&nbsp;                    else
+<b class="nc"><i>202</i>&nbsp;                        invalidNumberInput();</b>
+<b class="fc"><i>203</i>&nbsp;                }</b>
+<i>204</i>&nbsp;
+<i>205</i>&nbsp;            }
+<i>206</i>&nbsp;
+<i>207</i>&nbsp;
+<b class="fc"><i>208</i>&nbsp;        }</b>
+<i>209</i>&nbsp;    }
+<i>210</i>&nbsp;
+<i>211</i>&nbsp;    //ActionListener for the create create HrRequest button on the HrRequest page on the main frame
+<i>212</i>&nbsp;    class HrRequestListener implements ActionListener {
+<i>213</i>&nbsp;        private JComboBox contractTypeCoboBox;
+<i>214</i>&nbsp;        private JComboBox requestingDepartmentComboBox, projectComboBox;
+<i>215</i>&nbsp;        private JTextField jobTitleField;
+<i>216</i>&nbsp;        private JTextField jobDescriptionField;
+<i>217</i>&nbsp;
+<i>218</i>&nbsp;        HrRequestListener(JComboBox contractTypeComboBox, JComboBox requestingDepartmentComboBox,
+<i>219</i>&nbsp;                          JComboBox projectComboBox, JTextField jobTitleField,
+<b class="fc"><i>220</i>&nbsp;                          JTextField jobDescriptionField) {</b>
+<i>221</i>&nbsp;
+<b class="fc"><i>222</i>&nbsp;            this.contractTypeCoboBox = contractTypeComboBox;</b>
+<b class="fc"><i>223</i>&nbsp;            this.requestingDepartmentComboBox = requestingDepartmentComboBox;</b>
+<b class="fc"><i>224</i>&nbsp;            this.projectComboBox = projectComboBox;</b>
+<b class="fc"><i>225</i>&nbsp;            this.jobTitleField = jobTitleField;</b>
+<b class="fc"><i>226</i>&nbsp;            this.jobDescriptionField = jobDescriptionField;</b>
+<b class="fc"><i>227</i>&nbsp;        }</b>
+<i>228</i>&nbsp;
+<i>229</i>&nbsp;        @Override
+<i>230</i>&nbsp;        public void actionPerformed(ActionEvent e) {
+<i>231</i>&nbsp;
+<b class="fc"><i>232</i>&nbsp;            if (jobTitleField.getText().length() == 0 || jobDescriptionField.getText().length() == 0) {</b>
+<b class="nc"><i>233</i>&nbsp;                invalidInput(&quot;&quot;);</b>
+<i>234</i>&nbsp;            } else {
+<i>235</i>&nbsp;
+<i>236</i>&nbsp;                try {
+<b class="fc"><i>237</i>&nbsp;                    HrRequest hrRequest = new HrRequest(Long.parseLong((String) projectComboBox.getSelectedItem()),</b>
+<b class="fc"><i>238</i>&nbsp;                            contractTypeCoboBox.getSelectedIndex(),</b>
+<b class="fc"><i>239</i>&nbsp;                            requestingDepartmentComboBox.getSelectedIndex(), jobTitleField.getText(), jobDescriptionField.getText());</b>
+<b class="fc"><i>240</i>&nbsp;                    hrRequests.add(hrRequest);</b>
+<b class="fc"><i>241</i>&nbsp;                    clearFields(jobTitleField, jobDescriptionField);</b>
+<b class="fc"><i>242</i>&nbsp;                    updateGUI();</b>
+<b class="nc"><i>243</i>&nbsp;                } catch (NumberFormatException e2) {</b>
+<b class="nc"><i>244</i>&nbsp;                    if (e2.getMessage() == &quot;null&quot;)</b>
+<b class="nc"><i>245</i>&nbsp;                        invalidComboBoxValue();</b>
+<i>246</i>&nbsp;                    else
+<b class="nc"><i>247</i>&nbsp;                        invalidNumberInput();</b>
+<b class="fc"><i>248</i>&nbsp;                }</b>
+<i>249</i>&nbsp;
+<i>250</i>&nbsp;            }
+<i>251</i>&nbsp;
+<b class="fc"><i>252</i>&nbsp;        }</b>
+<i>253</i>&nbsp;
+<i>254</i>&nbsp;    }
+<i>255</i>&nbsp;
+<i>256</i>&nbsp;    //ActionListener for the create budgetIssue button on the budget-issue page on the main frame
+<i>257</i>&nbsp;    class BudgetIssueListener implements ActionListener {
+<i>258</i>&nbsp;
+<i>259</i>&nbsp;        private JTextField amountField, reasonField;
+<i>260</i>&nbsp;        private JComboBox requestingDepartmentComboBox, projectComboBox;
+<i>261</i>&nbsp;
+<i>262</i>&nbsp;        BudgetIssueListener(JTextField amountField, JTextField reasonField, JComboBox requestingDepartmentComboBox,
+<b class="fc"><i>263</i>&nbsp;                            JComboBox projectComboBox) {</b>
+<i>264</i>&nbsp;
+<b class="fc"><i>265</i>&nbsp;            this.amountField = amountField;</b>
+<b class="fc"><i>266</i>&nbsp;            this.reasonField = reasonField;</b>
+<b class="fc"><i>267</i>&nbsp;            this.requestingDepartmentComboBox = requestingDepartmentComboBox;</b>
+<b class="fc"><i>268</i>&nbsp;            this.projectComboBox = projectComboBox;</b>
+<i>269</i>&nbsp;
+<b class="fc"><i>270</i>&nbsp;        }</b>
+<i>271</i>&nbsp;
+<i>272</i>&nbsp;        @Override
+<i>273</i>&nbsp;        public void actionPerformed(ActionEvent e) {
+<i>274</i>&nbsp;
+<b class="fc"><i>275</i>&nbsp;            if (amountField.getText().length() == 0 || reasonField.getText().length() == 0) {</b>
+<b class="nc"><i>276</i>&nbsp;                invalidInput(&quot;&quot;);</b>
+<i>277</i>&nbsp;            } else {
+<i>278</i>&nbsp;                try {
+<b class="fc"><i>279</i>&nbsp;                    long projects[] = new long[gui.getApplications().size()];</b>
+<b class="fc"><i>280</i>&nbsp;                    for (int i = 0; i &lt; gui.getApplications().size(); i++) {</b>
+<b class="fc"><i>281</i>&nbsp;                        projects[i] = gui.getApplications().get(i).getProjectRefrenceId();</b>
+<i>282</i>&nbsp;                    }
+<i>283</i>&nbsp;
+<b class="fc"><i>284</i>&nbsp;                    BudgetIssueRequest b = new BudgetIssueRequest(requestingDepartmentComboBox.getSelectedIndex(),</b>
+<b class="fc"><i>285</i>&nbsp;                            projects[projectComboBox.getSelectedIndex()], Integer.valueOf(amountField.getText()).intValue(), reasonField.getText());</b>
+<b class="fc"><i>286</i>&nbsp;                    budgetIssues.add(b);</b>
+<b class="fc"><i>287</i>&nbsp;                    clearFields(amountField, reasonField);</b>
+<b class="fc"><i>288</i>&nbsp;                    updateGUI();</b>
+<b class="nc"><i>289</i>&nbsp;                } catch (Exception e2) {</b>
+<b class="nc"><i>290</i>&nbsp;                    System.out.println(&quot;Exception catched, hrrequest: &quot; + e2.getMessage());</b>
+<b class="nc"><i>291</i>&nbsp;                    if (e2.getMessage() == &quot;null&quot; || e2.getMessage().contains(&quot;-1&quot;))</b>
+<b class="nc"><i>292</i>&nbsp;                        invalidComboBoxValue();</b>
+<i>293</i>&nbsp;                    else
+<b class="nc"><i>294</i>&nbsp;                        invalidNumberInput();</b>
+<b class="fc"><i>295</i>&nbsp;                }</b>
+<i>296</i>&nbsp;
+<i>297</i>&nbsp;            }
+<i>298</i>&nbsp;
+<i>299</i>&nbsp;
+<b class="fc"><i>300</i>&nbsp;        }</b>
+<i>301</i>&nbsp;
+<i>302</i>&nbsp;    }
+<i>303</i>&nbsp;
+<i>304</i>&nbsp;    //ActionListener for the create subtask button on the subtasks page on the main frame
+<i>305</i>&nbsp;    class SubTeamTasksListener implements ActionListener {
+<i>306</i>&nbsp;
+<i>307</i>&nbsp;        private JTextField descriptionField, assignedToField, priorityField;
+<i>308</i>&nbsp;        private JComboBox projectComboBox;
+<i>309</i>&nbsp;
+<b class="fc"><i>310</i>&nbsp;        SubTeamTasksListener(JTextField descriptionField, JTextField assignedToField, JTextField priorityField, JComboBox projectComboBox) {</b>
+<b class="fc"><i>311</i>&nbsp;            this.descriptionField = descriptionField;</b>
+<b class="fc"><i>312</i>&nbsp;            this.assignedToField = assignedToField;</b>
+<b class="fc"><i>313</i>&nbsp;            this.priorityField = priorityField;</b>
+<b class="fc"><i>314</i>&nbsp;            this.projectComboBox = projectComboBox;</b>
+<b class="fc"><i>315</i>&nbsp;        }</b>
+<i>316</i>&nbsp;
+<i>317</i>&nbsp;        @Override
+<i>318</i>&nbsp;        public void actionPerformed(ActionEvent e) {
+<i>319</i>&nbsp;
+<i>320</i>&nbsp;
+<b class="fc"><i>321</i>&nbsp;            if (descriptionField.getText().length() == 0 || assignedToField.getText().length() == 0 || priorityField.getText().length() == 0) {</b>
+<b class="nc"><i>322</i>&nbsp;                invalidInput(&quot;&quot;);</b>
+<i>323</i>&nbsp;            } else {
+<i>324</i>&nbsp;                try {
+<b class="fc"><i>325</i>&nbsp;                    SubTeamTask task = new SubTeamTask(Long.parseLong((String) projectComboBox.getSelectedItem()),</b>
+<b class="fc"><i>326</i>&nbsp;                            descriptionField.getText(), assignedToField.getText(), Integer.parseInt(priorityField.getText()));</b>
+<b class="fc"><i>327</i>&nbsp;                    tasks.add(task);</b>
+<b class="fc"><i>328</i>&nbsp;                    updateGUI();</b>
+<b class="nc"><i>329</i>&nbsp;                } catch (NumberFormatException e2) {</b>
+<b class="nc"><i>330</i>&nbsp;                    if (e2.getMessage() == &quot;null&quot;)</b>
+<b class="nc"><i>331</i>&nbsp;                        invalidComboBoxValue();</b>
+<i>332</i>&nbsp;                    else
+<b class="nc"><i>333</i>&nbsp;                        invalidNumberInput();</b>
+<b class="fc"><i>334</i>&nbsp;                }</b>
+<i>335</i>&nbsp;            }
+<b class="fc"><i>336</i>&nbsp;        }</b>
+<i>337</i>&nbsp;    }
+<i>338</i>&nbsp;
+<i>339</i>&nbsp;    //errorMessage dialog
+<i>340</i>&nbsp;    private void errorMessage(String string) {
+<b class="nc"><i>341</i>&nbsp;        SwingUtilities.invokeLater(() -&gt;</b>
+<b class="nc"><i>342</i>&nbsp;                JOptionPane.showMessageDialog(null, string,</b>
+<i>343</i>&nbsp;                        &quot;Error&quot;, JOptionPane.INFORMATION_MESSAGE)
+<i>344</i>&nbsp;        );
+<b class="nc"><i>345</i>&nbsp;    }</b>
+<i>346</i>&nbsp;
+<i>347</i>&nbsp;    //invalidInput dialog
+<i>348</i>&nbsp;    private void invalidInput(String errorStr) {
+<b class="nc"><i>349</i>&nbsp;        SwingUtilities.invokeLater(() -&gt;</b>
+<b class="nc"><i>350</i>&nbsp;                JOptionPane.showMessageDialog(null, &quot;Please fill all fields&quot; + errorStr,</b>
+<i>351</i>&nbsp;                        &quot;Invalid input&quot;, JOptionPane.INFORMATION_MESSAGE)
+<i>352</i>&nbsp;        );
+<b class="nc"><i>353</i>&nbsp;    }</b>
+<i>354</i>&nbsp;
+<i>355</i>&nbsp;    //Invalid number dialog
+<i>356</i>&nbsp;    private void invalidNumberInput() {
+<b class="nc"><i>357</i>&nbsp;        SwingUtilities.invokeLater(() -&gt;</b>
+<b class="nc"><i>358</i>&nbsp;                JOptionPane.showMessageDialog(null, &quot;There is text in number field(s)&quot;,</b>
+<i>359</i>&nbsp;                        &quot;Invalid input&quot;, JOptionPane.INFORMATION_MESSAGE)
+<i>360</i>&nbsp;        );
+<b class="nc"><i>361</i>&nbsp;    }</b>
+<i>362</i>&nbsp;
+<i>363</i>&nbsp;    //Invalid combobox dialog
+<i>364</i>&nbsp;    private void invalidComboBoxValue() {
+<b class="nc"><i>365</i>&nbsp;        SwingUtilities.invokeLater(() -&gt;</b>
+<b class="nc"><i>366</i>&nbsp;                JOptionPane.showMessageDialog(null, &quot;Invalid combobox selection&quot;,</b>
+<i>367</i>&nbsp;                        &quot;Invalid input&quot;, JOptionPane.INFORMATION_MESSAGE)
+<i>368</i>&nbsp;        );
+<b class="nc"><i>369</i>&nbsp;    }</b>
+<i>370</i>&nbsp;
+<i>371</i>&nbsp;    //ActionListener for the save edits button on the EventApplication page on the main frame
+<i>372</i>&nbsp;    class EventEditListener implements ActionListener {
+<i>373</i>&nbsp;        private DefaultTableModel model;
+<i>374</i>&nbsp;        private User user;
+<i>375</i>&nbsp;
+<b class="fc"><i>376</i>&nbsp;        EventEditListener(DefaultTableModel model, User user) {</b>
+<b class="fc"><i>377</i>&nbsp;            this.model = model;</b>
+<b class="fc"><i>378</i>&nbsp;            this.user = user;</b>
+<b class="fc"><i>379</i>&nbsp;        }</b>
+<i>380</i>&nbsp;
+<i>381</i>&nbsp;        @Override
+<i>382</i>&nbsp;        public void actionPerformed(ActionEvent e) {
+<b class="fc"><i>383</i>&nbsp;            for (int i = 0; i &lt; model.getRowCount(); i++) {</b>
+<b class="fc"><i>384</i>&nbsp;                long projectReferenceId = Long.parseLong((String) model.getValueAt(i, 0));</b>
+<b class="fc"><i>385</i>&nbsp;                long budget = Long.parseLong((String) model.getValueAt(i, 1));</b>
+<b class="fc"><i>386</i>&nbsp;                int discount = Integer.parseInt((String) model.getValueAt(i, 2));</b>
+<b class="fc"><i>387</i>&nbsp;                String eventType = (String) model.getValueAt(i, 3);</b>
+<b class="fc"><i>388</i>&nbsp;                String preferences = (String) model.getValueAt(i, 4);</b>
+<b class="fc"><i>389</i>&nbsp;                String description = (String) model.getValueAt(i, 5);</b>
+<b class="fc"><i>390</i>&nbsp;                String from = (String) model.getValueAt(i, 6);</b>
+<b class="fc"><i>391</i>&nbsp;                String to = (String) model.getValueAt(i, 7);</b>
+<b class="fc"><i>392</i>&nbsp;                int expectedAttendees = Integer.parseInt((String) model.getValueAt(i, 8));</b>
+<b class="fc"><i>393</i>&nbsp;                String budgetComments = (String) model.getValueAt(i, 9);</b>
+<b class="fc"><i>394</i>&nbsp;                String status = (String) model.getValueAt(i, 10);</b>
+<b class="fc"><i>395</i>&nbsp;                applications.forEach((app) -&gt; {</b>
+<b class="fc"><i>396</i>&nbsp;                    if (app.getProjectRefrenceId() == projectReferenceId) {</b>
+<b class="fc"><i>397</i>&nbsp;                        boolean edited = (budget != app.getBudget() ||</b>
+<b class="nc"><i>398</i>&nbsp;                                discount != app.getDiscount() || !eventType.equals(app.getEventType()) ||</b>
+<b class="nc"><i>399</i>&nbsp;                                !preferences.equals(app.getPreferences()) || !description.equals(app.getDescription())</b>
+<b class="nc"><i>400</i>&nbsp;                                || !to.equals(app.getTo()) || !from.equals((app.getFrom())) || expectedAttendees != app.getExpectedAttendees()</b>
+<b class="nc"><i>401</i>&nbsp;                                || !budgetComments.equals(budgetComments) || !status.equals(app.getStatus()));</b>
+<b class="fc"><i>402</i>&nbsp;                        app.setBudget(budget);</b>
+<b class="fc"><i>403</i>&nbsp;                        app.setDiscount(discount);</b>
+<b class="fc"><i>404</i>&nbsp;                        app.setEventType(eventType);</b>
+<b class="fc"><i>405</i>&nbsp;                        app.setPreferences(preferences);</b>
+<b class="fc"><i>406</i>&nbsp;                        app.setDescription(description);</b>
+<b class="fc"><i>407</i>&nbsp;                        app.setTo(to);</b>
+<b class="fc"><i>408</i>&nbsp;                        app.setFrom(from);</b>
+<b class="fc"><i>409</i>&nbsp;                        app.setExpectedAttendees(expectedAttendees);</b>
+<b class="fc"><i>410</i>&nbsp;                        app.setBudgetComments(budgetComments);</b>
+<b class="fc"><i>411</i>&nbsp;                        app.setStatus(status);</b>
+<b class="fc"><i>412</i>&nbsp;                        if (edited)</b>
+<b class="fc"><i>413</i>&nbsp;                            app.setHistory(app.getHistory() + &quot;\n&quot; + user.getRole() + &quot; &quot; + user.getUsername() + &quot; reviewed and edited&quot;);</b>
+<i>414</i>&nbsp;                    }
+<b class="fc"><i>415</i>&nbsp;                });</b>
+<i>416</i>&nbsp;            }
+<b class="fc"><i>417</i>&nbsp;            updateGUI();</b>
+<b class="fc"><i>418</i>&nbsp;        }</b>
+<i>419</i>&nbsp;    }
+<i>420</i>&nbsp;
+<i>421</i>&nbsp;    //ActionListener for the approve application button on the home page on the main frame
+<i>422</i>&nbsp;    class ApproveListener implements ActionListener {
+<i>423</i>&nbsp;        private DefaultTableModel model;
+<i>424</i>&nbsp;        private User user;
+<i>425</i>&nbsp;
+<b class="fc"><i>426</i>&nbsp;        public ApproveListener(DefaultTableModel model, User user) {</b>
+<b class="fc"><i>427</i>&nbsp;            this.model = model;</b>
+<b class="fc"><i>428</i>&nbsp;            this.user = user;</b>
+<b class="fc"><i>429</i>&nbsp;        }</b>
+<i>430</i>&nbsp;
+<i>431</i>&nbsp;        @Override
+<i>432</i>&nbsp;        public void actionPerformed(ActionEvent e) {
+<b class="fc"><i>433</i>&nbsp;            for (int i = 0; i &lt; model.getRowCount(); i++) {</b>
+<b class="fc"><i>434</i>&nbsp;                long projectReferenceId = Long.parseLong((String) model.getValueAt(i, 0));</b>
+<b class="fc"><i>435</i>&nbsp;                boolean approved = (Boolean) model.getValueAt(i, 1);</b>
+<b class="fc"><i>436</i>&nbsp;                applications.forEach((app) -&gt; {</b>
+<b class="fc"><i>437</i>&nbsp;                    if (app.getProjectRefrenceId() == projectReferenceId) {</b>
+<b class="fc"><i>438</i>&nbsp;                        if (!app.isApproved() &amp;&amp; approved)</b>
+<b class="fc"><i>439</i>&nbsp;                            app.setHistory(app.getHistory() + &quot;\n&quot; + user.getRole() + &quot; &quot; + user.getUsername() + &quot; &quot; +</b>
+<i>440</i>&nbsp;                                    &quot; approved the application&quot;);
+<b class="fc"><i>441</i>&nbsp;                        app.setApproved(approved);</b>
+<i>442</i>&nbsp;                    }
+<b class="fc"><i>443</i>&nbsp;                });</b>
+<i>444</i>&nbsp;            }
+<b class="fc"><i>445</i>&nbsp;            updateGUI();</b>
+<b class="fc"><i>446</i>&nbsp;        }</b>
+<i>447</i>&nbsp;    }
+<i>448</i>&nbsp;
+<i>449</i>&nbsp;    /**
+<i>450</i>&nbsp;     * getUsers
+<i>451</i>&nbsp;     *
+<i>452</i>&nbsp;     * @return List of all users
+<i>453</i>&nbsp;     */
+<i>454</i>&nbsp;    public ArrayList&lt;User&gt; getUsers() {
+<b class="fc"><i>455</i>&nbsp;        return users;</b>
+<i>456</i>&nbsp;    }
+<i>457</i>&nbsp;
+<i>458</i>&nbsp;    /**
+<i>459</i>&nbsp;     * getClients
+<i>460</i>&nbsp;     *
+<i>461</i>&nbsp;     * @return list of all clients
+<i>462</i>&nbsp;     */
+<i>463</i>&nbsp;    public ArrayList&lt;ClientRecord&gt; getClients() {
+<b class="fc"><i>464</i>&nbsp;        return clients;</b>
+<i>465</i>&nbsp;    }
+<i>466</i>&nbsp;
+<i>467</i>&nbsp;    /**
+<i>468</i>&nbsp;     * getApplications
+<i>469</i>&nbsp;     *
+<i>470</i>&nbsp;     * @return list of all applications
+<i>471</i>&nbsp;     */
+<i>472</i>&nbsp;    public ArrayList&lt;EventApplication&gt; getApplications() {
+<b class="fc"><i>473</i>&nbsp;        return applications;</b>
+<i>474</i>&nbsp;    }
+<i>475</i>&nbsp;
+<i>476</i>&nbsp;    /**
+<i>477</i>&nbsp;     * Updates the list of applications
+<i>478</i>&nbsp;     *
+<i>479</i>&nbsp;     * @param applications new list of applications
+<i>480</i>&nbsp;     */
+<i>481</i>&nbsp;    public void setApplications(ArrayList&lt;EventApplication&gt; applications) {
+<b class="fc"><i>482</i>&nbsp;        this.applications = applications;</b>
+<b class="fc"><i>483</i>&nbsp;    }</b>
+<i>484</i>&nbsp;
+<i>485</i>&nbsp;    /**
+<i>486</i>&nbsp;     * getHrRequests
+<i>487</i>&nbsp;     *
+<i>488</i>&nbsp;     * @return list of all HrRequests
+<i>489</i>&nbsp;     */
+<i>490</i>&nbsp;    public ArrayList&lt;HrRequest&gt; getHrRequests() {
+<b class="fc"><i>491</i>&nbsp;        return hrRequests;</b>
+<i>492</i>&nbsp;    }
+<i>493</i>&nbsp;
+<i>494</i>&nbsp;    /**
+<i>495</i>&nbsp;     * getBudgetIssueRequests
+<i>496</i>&nbsp;     *
+<i>497</i>&nbsp;     * @return list of all BudgetIssueRequests
+<i>498</i>&nbsp;     */
+<i>499</i>&nbsp;    public ArrayList&lt;BudgetIssueRequest&gt; getBudgetIssueRequests() {
+<b class="fc"><i>500</i>&nbsp;        return budgetIssues;</b>
+<i>501</i>&nbsp;    }
+<i>502</i>&nbsp;
+<i>503</i>&nbsp;    /**
+<i>504</i>&nbsp;     * getTasks
+<i>505</i>&nbsp;     *
+<i>506</i>&nbsp;     * @return list of all subteam-tasks
+<i>507</i>&nbsp;     */
+<i>508</i>&nbsp;    public ArrayList&lt;SubTeamTask&gt; getTasks() {
+<b class="fc"><i>509</i>&nbsp;        return tasks;</b>
+<i>510</i>&nbsp;    }
+<i>511</i>&nbsp;
+<i>512</i>&nbsp;    /**
+<i>513</i>&nbsp;     * Removes a budget issue request with index n
+<i>514</i>&nbsp;     *
+<i>515</i>&nbsp;     * @param n index to be removed
+<i>516</i>&nbsp;     */
+<i>517</i>&nbsp;    public void removeBudgetIssueRequest(int n) {
+<b class="fc"><i>518</i>&nbsp;        budgetIssues.remove(n);</b>
+<b class="fc"><i>519</i>&nbsp;        updateGUI();</b>
+<b class="fc"><i>520</i>&nbsp;    }</b>
+<i>521</i>&nbsp;
+<i>522</i>&nbsp;    /**
+<i>523</i>&nbsp;     * Removes HrRequest with index selectedRow
+<i>524</i>&nbsp;     *
+<i>525</i>&nbsp;     * @param selectedRow index to be removed
+<i>526</i>&nbsp;     */
+<i>527</i>&nbsp;    public void removeHrRequest(int selectedRow) {
+<b class="fc"><i>528</i>&nbsp;        hrRequests.remove(selectedRow);</b>
+<b class="fc"><i>529</i>&nbsp;        updateGUI();</b>
+<i>530</i>&nbsp;
+<b class="fc"><i>531</i>&nbsp;    }</b>
+<i>532</i>&nbsp;
+<i>533</i>&nbsp;    /**
+<i>534</i>&nbsp;     * Adds a Frame to the application
+<i>535</i>&nbsp;     *
+<i>536</i>&nbsp;     * @param frame
+<i>537</i>&nbsp;     */
+<i>538</i>&nbsp;    public void addFrame(MainFrame frame) {
+<b class="fc"><i>539</i>&nbsp;        mainFrames.add(frame);</b>
+<b class="fc"><i>540</i>&nbsp;    }</b>
+<i>541</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2016-10-13 17:55</div>
+</div>
+</body>
+</html>

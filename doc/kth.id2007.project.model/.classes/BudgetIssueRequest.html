@@ -1,0 +1,161 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: BudgetIssueRequest</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">kth.id2007.project.model</a> ]
+</div>
+
+<h1>Coverage Summary for Class: BudgetIssueRequest (kth.id2007.project.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">BudgetIssueRequest</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    55,6%
+  </span>
+  <span class="absValue">
+    (5/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    55,6%
+  </span>
+  <span class="absValue">
+    (10/ 18)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package kth.id2007.project.model;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;/**
+<i>4</i>&nbsp; * @author mg
+<i>5</i>&nbsp; *
+<i>6</i>&nbsp; */
+<i>7</i>&nbsp;public class BudgetIssueRequest {
+<i>8</i>&nbsp;	private int requestingDepartment;
+<i>9</i>&nbsp;	private long projectReferenceId;
+<i>10</i>&nbsp;	private int amount;
+<i>11</i>&nbsp;	private String reason;
+<i>12</i>&nbsp;	
+<i>13</i>&nbsp;	/**
+<i>14</i>&nbsp;	 * @param requestingDepartment
+<i>15</i>&nbsp;	 * @param projectReferenceId
+<i>16</i>&nbsp;	 * @param amount
+<i>17</i>&nbsp;	 * @param reason
+<i>18</i>&nbsp;	 */
+<i>19</i>&nbsp;	public BudgetIssueRequest(int requestingDepartment, long projectReferenceId, int amount, String reason) {
+<b class="fc"><i>20</i>&nbsp;		super();</b>
+<b class="fc"><i>21</i>&nbsp;		this.requestingDepartment = requestingDepartment;</b>
+<b class="fc"><i>22</i>&nbsp;		this.projectReferenceId = projectReferenceId;</b>
+<b class="fc"><i>23</i>&nbsp;		this.amount = amount;</b>
+<b class="fc"><i>24</i>&nbsp;		this.reason = reason;</b>
+<b class="fc"><i>25</i>&nbsp;	}</b>
+<i>26</i>&nbsp;	
+<i>27</i>&nbsp;	/**
+<i>28</i>&nbsp;	 * @return
+<i>29</i>&nbsp;	 */
+<i>30</i>&nbsp;	public int getRequestingDepartment() {
+<b class="fc"><i>31</i>&nbsp;		return requestingDepartment;</b>
+<i>32</i>&nbsp;	}
+<i>33</i>&nbsp;	/**
+<i>34</i>&nbsp;	 * @param requestingDepartment
+<i>35</i>&nbsp;	 */
+<i>36</i>&nbsp;	public void setRequestingDepartment(int requestingDepartment) {
+<b class="nc"><i>37</i>&nbsp;		this.requestingDepartment = requestingDepartment;</b>
+<b class="nc"><i>38</i>&nbsp;	}</b>
+<i>39</i>&nbsp;	/**
+<i>40</i>&nbsp;	 * @return
+<i>41</i>&nbsp;	 */
+<i>42</i>&nbsp;	public long getProjectReferenceId() {
+<b class="fc"><i>43</i>&nbsp;		return projectReferenceId;</b>
+<i>44</i>&nbsp;	}
+<i>45</i>&nbsp;	/**
+<i>46</i>&nbsp;	 * @param projectRefrenceId
+<i>47</i>&nbsp;	 */
+<i>48</i>&nbsp;	public void setProjectRefrenceId(long projectRefrenceId) {
+<b class="nc"><i>49</i>&nbsp;		this.projectReferenceId = projectRefrenceId;</b>
+<b class="nc"><i>50</i>&nbsp;	}</b>
+<i>51</i>&nbsp;	/**
+<i>52</i>&nbsp;	 * @return
+<i>53</i>&nbsp;	 */
+<i>54</i>&nbsp;	public int getAmount() {
+<b class="fc"><i>55</i>&nbsp;		return amount;</b>
+<i>56</i>&nbsp;	}
+<i>57</i>&nbsp;	/**
+<i>58</i>&nbsp;	 * @param amount
+<i>59</i>&nbsp;	 */
+<i>60</i>&nbsp;	public void setAmount(int amount) {
+<b class="nc"><i>61</i>&nbsp;		this.amount = amount;</b>
+<b class="nc"><i>62</i>&nbsp;	}</b>
+<i>63</i>&nbsp;	/**
+<i>64</i>&nbsp;	 * @return
+<i>65</i>&nbsp;	 */
+<i>66</i>&nbsp;	public String getReason() {
+<b class="fc"><i>67</i>&nbsp;		return reason;</b>
+<i>68</i>&nbsp;	}
+<i>69</i>&nbsp;	/**
+<i>70</i>&nbsp;	 * @param reason
+<i>71</i>&nbsp;	 */
+<i>72</i>&nbsp;	public void setReason(String reason) {
+<b class="nc"><i>73</i>&nbsp;		this.reason = reason;</b>
+<b class="nc"><i>74</i>&nbsp;	}</b>
+<i>75</i>&nbsp;	
+<i>76</i>&nbsp;	
+<i>77</i>&nbsp;	
+<i>78</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2016-10-13 17:55</div>
+</div>
+</body>
+</html>
