@@ -1,19 +1,20 @@
 package kth.id2007.project.model;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Kim Hammar on 2019-05-18.
  */
 public class ParsedErrorsDTO {
 
-  private List<ValidationErrorMessage> idMustBeUniqueErrors;
+  private Map<String, List<ValidationErrorMessage>> idMustBeUniqueErrors;
   private List<ValidationErrorMessage> expectedTotalElapsedTimeErrors;
   private List<ValidationErrorMessage> expectedTotalTimeErrors;
   private List<ValidationErrorMessage> unknownErrors;
 
   public ParsedErrorsDTO(
-      List<ValidationErrorMessage> idMustBeUniqueErrors, List<ValidationErrorMessage> expectedTotalElapsedTimeErrors,
+      Map<String, List<ValidationErrorMessage>> idMustBeUniqueErrors, List<ValidationErrorMessage> expectedTotalElapsedTimeErrors,
       List<ValidationErrorMessage> expectedTotalTimeErrors, List<ValidationErrorMessage> unknownErrors) {
     this.idMustBeUniqueErrors = idMustBeUniqueErrors;
     this.expectedTotalElapsedTimeErrors = expectedTotalElapsedTimeErrors;
@@ -23,11 +24,11 @@ public class ParsedErrorsDTO {
   public ParsedErrorsDTO() {
   }
 
-  public List<ValidationErrorMessage> getIdMustBeUniqueErrors() {
+  public Map<String, List<ValidationErrorMessage>> getIdMustBeUniqueErrors() {
     return idMustBeUniqueErrors;
   }
 
-  public void setIdMustBeUniqueErrors(List<ValidationErrorMessage> idMustBeUniqueErrors) {
+  public void setIdMustBeUniqueErrors(Map<String, List<ValidationErrorMessage>> idMustBeUniqueErrors) {
     this.idMustBeUniqueErrors = idMustBeUniqueErrors;
   }
 
