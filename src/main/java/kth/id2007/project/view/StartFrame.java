@@ -85,7 +85,7 @@ public class StartFrame extends JFrame
 		lbl.setName("config_title");
 		lbl.setFont(PBold);
 		add(lbl,"span 6");
-		lbl = new JLabel("3. Select a directory to place the old XML files for backup in case something goes wrong");
+		lbl = new JLabel("3. Select a directory to place the old smil and NCC files for backup in case something goes wrong");
 		lbl.setName("config_title");
 		lbl.setFont(PBold);
 		add(lbl,"span 6");
