@@ -151,13 +151,20 @@ public class GUI {
     private final JTextArea logsArea;
     private final StartFrame startFrame;
     private final JTextField backupDirField;
+    private final JCheckBox elapsedTimeCheckbox;
+    private final JCheckBox totalTimeCheckbox;
+    private final JCheckBox uniqueIdCheckbox;
 
-    RunButton(JTextField smilDirField, JTextField errorFileField, JTextArea logsArea, StartFrame startFrame, JTextField backupDirField) {
+    RunButton(JTextField smilDirField, JTextField errorFileField, JTextArea logsArea, StartFrame startFrame,
+              JTextField backupDirField, JCheckBox elapsedTimeCheckbox, JCheckBox totalTimeCheckbox, JCheckBox uniqueIdCheckbox) {
       this.errorFileField = errorFileField;
       this.smilDirField = smilDirField;
       this.logsArea = logsArea;
       this.startFrame = startFrame;
       this.backupDirField = backupDirField;
+      this.elapsedTimeCheckbox = elapsedTimeCheckbox;
+      this.totalTimeCheckbox = totalTimeCheckbox;
+      this.uniqueIdCheckbox = uniqueIdCheckbox;
     }
 
     /**
@@ -166,7 +173,7 @@ public class GUI {
      * @param e
      */
     public void actionPerformed(ActionEvent e) {
-      if (!validateInputs(errorFileField, smilDirField, backupDirField)) {
+      if (!validateInputs(errorFileField, smilDirField, backupDirField, elapsedTimeCheckbox, totalTimeCheckbox, uniqueIdCheckbox)) {
         return;
       }
       try {
@@ -189,7 +196,7 @@ public class GUI {
         logsArea.append("Successfully parsed " + parsedNccFiles.size() + " ncc files \n");
         String backupDir = makeBackupDir(backupDirField.getText(), FileSystems.getDefault().getPath(smilDirField.getText()).getFileName().toString());
         logsArea.append("Created backup directory: " + backupDir + "\n");
-        correctErrors(parsedErrorsDTO, parsedSmilFiles, logsArea, backupDir, parsedNccFiles);
+        correctErrors(parsedErrorsDTO, parsedSmilFiles, logsArea, backupDir, parsedNccFiles, elapsedTimeCheckbox, totalTimeCheckbox, uniqueIdCheckbox);
         startFrame.pack();
       } catch (Exception e1) {
         e1.printStackTrace();
@@ -198,28 +205,37 @@ public class GUI {
   }
 
   private void correctErrors(ParsedErrorsDTO parsedErrorsDTO, List<SmilFile> parsedSmilFiles,
-                             JTextArea logsArea, String backupDir, List<NccFile> parsedNccFiles) throws IOException {
-    logsArea.append("Correcting TOTAL_ELAPSED_TIME_ERRORS.. \n");
-    for (ValidationErrorMessage elapsedTimeError : parsedErrorsDTO.getExpectedTotalElapsedTimeErrors()) {
-      logsArea.append("correcting TOTAL_ELAPSED_TIME in file: " + elapsedTimeError.getFile() + "\n");
-      copyToBackupDir(elapsedTimeError.getFile(), backupDir, logsArea);
-      SmilFile smilFile = findSmilFile(parsedSmilFiles, elapsedTimeError.getFile(), logsArea);
-      correctTimeElapsedError(elapsedTimeError, smilFile, logsArea);
+                             JTextArea logsArea, String backupDir, List<NccFile> parsedNccFiles,
+                             JCheckBox elapsedTimeCheckbox, JCheckBox totalTimeCheckbox, JCheckBox uniqueIdCheckbox)
+      throws IOException {
+    if(elapsedTimeCheckbox.isSelected()){
+      logsArea.append("Correcting TOTAL_ELAPSED_TIME_ERRORS.. \n");
+      for (ValidationErrorMessage elapsedTimeError : parsedErrorsDTO.getExpectedTotalElapsedTimeErrors()) {
+        logsArea.append("correcting TOTAL_ELAPSED_TIME in file: " + elapsedTimeError.getFile() + "\n");
+        copyToBackupDir(elapsedTimeError.getFile(), backupDir, logsArea);
+        SmilFile smilFile = findSmilFile(parsedSmilFiles, elapsedTimeError.getFile(), logsArea);
+        correctTimeElapsedError(elapsedTimeError, smilFile, logsArea);
+      }
     }
-    logsArea.append("Correcting TOTAL_TIME_ERRORS.. \n");
-    for (ValidationErrorMessage totalTimeError : parsedErrorsDTO.getExpectedTotalTimeErrors()) {
-      logsArea.append("correcting TOTAL_TIME in file: " + totalTimeError.getFile() + "\n");
-      copyToBackupDir(totalTimeError.getFile(), backupDir, logsArea);
-      NccFile nccFile = findNccFile(parsedNccFiles, totalTimeError.getFile(), logsArea);
-      correctTotalTimeError(totalTimeError, nccFile, logsArea);
+    if(totalTimeCheckbox.isSelected()){
+      logsArea.append("Correcting TOTAL_TIME_ERRORS.. \n");
+      for (ValidationErrorMessage totalTimeError : parsedErrorsDTO.getExpectedTotalTimeErrors()) {
+        logsArea.append("correcting TOTAL_TIME in file: " + totalTimeError.getFile() + "\n");
+        copyToBackupDir(totalTimeError.getFile(), backupDir, logsArea);
+        NccFile nccFile = findNccFile(parsedNccFiles, totalTimeError.getFile(), logsArea);
+        correctTotalTimeError(totalTimeError, nccFile, logsArea);
+      }
     }
-    logsArea.append("Correcting ID_MUST_BE_UNIQUE_ERRORS.. \n");
-    for (String fileName : parsedErrorsDTO.getIdMustBeUniqueErrors().keySet()) {
-      logsArea.append("correcting ID_MUST_BE_UNIQUE in file: " + fileName + "\n");
-      copyToBackupDir(fileName, backupDir, logsArea);
-      SmilFile smilFile = findSmilFile(parsedSmilFiles, fileName, logsArea);
-      correctIdMustBeUniqueError(smilFile, logsArea);
+    if(uniqueIdCheckbox.isSelected()){
+      logsArea.append("Correcting ID_MUST_BE_UNIQUE_ERRORS.. \n");
+      for (String fileName : parsedErrorsDTO.getIdMustBeUniqueErrors().keySet()) {
+        logsArea.append("correcting ID_MUST_BE_UNIQUE in file: " + fileName + "\n");
+        copyToBackupDir(fileName, backupDir, logsArea);
+        SmilFile smilFile = findSmilFile(parsedSmilFiles, fileName, logsArea);
+        correctIdMustBeUniqueError(smilFile, logsArea);
+      }
     }
+    logsArea.append("Done! All errors corrected \n");
   }
 
   private Boolean correctTimeElapsedError(ValidationErrorMessage validationErrorMessage, SmilFile smilFile, JTextArea logsArea) {
@@ -232,7 +248,7 @@ public class GUI {
         metaElement.setAttribute("content", totalElapsedTime);
         try {
           writeModifiedDoc(smilDoc, smilFile.getPath());
-          logsArea.append("Successfully updated the total elapsed time in smil file: " + smilFile.getPath());
+          logsArea.append("Successfully updated the total elapsed time in smil file: " + smilFile.getPath() + "\n");
           return true;
         } catch (TransformerException e) {
           logsArea.append("there was an error updating the smil file: " + smilFile.getPath() + "\n");
@@ -251,7 +267,7 @@ public class GUI {
     orderParElementsById(parFields);
     try {
       writeModifiedDoc(smilDoc, smilFile.getPath());
-      logsArea.append("Successfully updated the unique id errors in smil file: " + smilFile.getPath());
+      logsArea.append("Successfully updated the unique id errors in smil file: " + smilFile.getPath() + "\n");
       return true;
     } catch (TransformerException e) {
       logsArea.append("there was an error updating the smil file: " + smilFile.getPath() + "\n");
@@ -314,7 +330,7 @@ public class GUI {
         metaElement.setAttribute("content", totalTime);
         try {
           writeModifiedDoc(nccDoc, nccFile.getPath());
-          logsArea.append("Successfully updated the total time in ncc file: " + nccFile.getPath());
+          logsArea.append("Successfully updated the total time in ncc file: " + nccFile.getPath() + "\n");
           return true;
         } catch (TransformerException e) {
           logsArea.append("there was an error updating the ncc file: " + nccFile.getPath() + "\n");
@@ -392,17 +408,22 @@ public class GUI {
     return null;
   }
 
-  private Boolean validateInputs(JTextField errorFileField, JTextField smilDirField, JTextField backupDirField) {
-    if (errorFileField.getText() == null || errorFileField.getText().isEmpty()) {
-      invalidInput(" you must specify a valid XML file with errors to correct ");
-      return false;
-    }
+  private Boolean validateInputs(JTextField errorFileField, JTextField smilDirField, JTextField backupDirField,
+                                 JCheckBox elapsedTimeCheckbox, JCheckBox totalTimeCheckbox, JCheckBox uniqueIdCheckbox) {
     if (smilDirField.getText() == null || smilDirField.getText().isEmpty()) {
       invalidInput(" you must specify a director with smil files ");
       return false;
     }
+    if (errorFileField.getText() == null || errorFileField.getText().isEmpty()) {
+      invalidInput(" you must specify a valid XML file with errors to correct ");
+      return false;
+    }
     if (backupDirField.getText() == null || backupDirField.getText().isEmpty()) {
       invalidInput(" you must specify a directory to place backup files ");
+      return false;
+    }
+    if(!elapsedTimeCheckbox.isSelected() && !totalTimeCheckbox.isSelected() && !uniqueIdCheckbox.isSelected()){
+      invalidInput(" you must select one or more checkbox with errors to correct ");
       return false;
     }
     return true;
